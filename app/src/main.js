@@ -5,22 +5,16 @@ define(function(require, exports, module) {
   // import dependencies
   var Engine = require('famous/core/Engine');
   var Surface = require('famous/core/Surface');
-  var Modifier = require('famous/core/Modifier');
   var Transform = require('famous/core/Transform');
+  var StateModifier = require('famous/modifiers/StateModifier');
 
   var mainContext = Engine.createContext();
 
   mainContext.setPerspective(1000);
 
-  var angle = 0;
-
-  var centerModifier = new Modifier({
+  var centerModifier = new StateModifier({
     origin: [0.5, 0.5],
-    align: [0.5, 0.5],
-    transform: function(){
-      angle += 0.03;
-      return Transform.rotateY(angle);
-    }
+    align: [0.5, 0.5]
   });
 
   var square = new Surface({
@@ -30,6 +24,9 @@ define(function(require, exports, module) {
     },
     classes: ['backfaceVisibility']
   });
+
+  centerModifier.setTransform( Transform.rotateY(1000), {duration: 500, curve: "easeOutBounce"} );
+  centerModifier.setTransform( Transform.rotateY(0), {duration: 3000, curve: "easeOutBounce"} );
 
   mainContext.add(centerModifier).add( square );
 });
