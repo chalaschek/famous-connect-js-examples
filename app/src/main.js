@@ -7,12 +7,13 @@ define(function(require, exports, module) {
   var Surface = require('famous/core/Surface');
   var Transform = require('famous/core/Transform');
   var StateModifier = require('famous/modifiers/StateModifier');
+  var SpringTransition = require('famous/transitions/SpringTransition');
 
   var mainContext = Engine.createContext();
 
   mainContext.setPerspective(1000);
 
-  var centerModifier = new StateModifier({
+  var stateModifier = new StateModifier({
     origin: [0.5, 0.5],
     align: [0.5, 0.5]
   });
@@ -25,8 +26,18 @@ define(function(require, exports, module) {
     classes: ['backfaceVisibility']
   });
 
-  centerModifier.setTransform( Transform.rotateY(1000), {duration: 500, curve: "easeOutBounce"} );
-  centerModifier.setTransform( Transform.rotateY(0), {duration: 3000, curve: "easeOutBounce"} );
+  stateModifier.setTransform( Transform.rotateY(1000), {
+    method: SpringTransition,
+    period: 500,
+    dampingRatio: 0.2
+  });
 
-  mainContext.add(centerModifier).add( square );
+  stateModifier.setTransform( Transform.rotateY(0), {
+    method: SpringTransition,
+    period: 500,
+    dampingRatio: 0.2
+  });
+
+
+  mainContext.add(stateModifier).add( square );
 });
