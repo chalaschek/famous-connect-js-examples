@@ -17,5 +17,5 @@ define(function(require, exports, module) {
     }
   });
 
-  mainContext.add( square );
+  mainContext.add(square);
 });
