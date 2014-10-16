@@ -17,10 +17,7 @@ define(function(require, exports, module) {
   var centerModifier = new Modifier({
     origin: [0.5, 0.5],
     align: [0.5, 0.5],
-    transform: function(){
-      angle += 0.03;
-      return Transform.rotateY(angle);
-    }
+    transform: Transform.translate(100, 200)
   });
 
   var square = new Surface({
