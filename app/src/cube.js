@@ -55,10 +55,9 @@ define(function(require, exports, module) {
       var surface = new Surface({
         size: [this.size, this.size],
         properties: {
-          backgroundColor: '#cccccc',
           border: '1px solid #333'
         },
-        classes: ['backfaceVisibility']
+        classes: ['backfaceVisibility', 'blue-background']
       });
 
       this.add(opacityModifier).add(translationModifier).add(rotationModifier).add(surface);
