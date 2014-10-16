@@ -25,10 +25,7 @@ define(function(require, exports, module) {
 
   var square = new Surface({
     size: [200, 200],
-    properties: {
-      backgroundColor: '#cccccc'
-    },
-    classes: ['backfaceVisibility']
+    classes: ['backfaceVisibility', 'blue-background']
   });
 
   mainContext.add(centerModifier).add(square);
