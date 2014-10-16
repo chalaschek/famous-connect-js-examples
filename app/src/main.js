@@ -26,18 +26,18 @@ define(function(require, exports, module) {
     classes: ['backfaceVisibility']
   });
 
-  stateModifier.setTransform( Transform.rotateY(1000), {
+  stateModifier.setTransform(Transform.rotateY(1000), {
     method: SpringTransition,
     period: 500,
     dampingRatio: 0.2
   });
 
-  stateModifier.setTransform( Transform.rotateY(0), {
+  stateModifier.setTransform(Transform.rotateY(0), {
     method: SpringTransition,
     period: 500,
     dampingRatio: 0.2
   });
 
 
-  mainContext.add(stateModifier).add( square );
+  mainContext.add(stateModifier).add(square);
 });
