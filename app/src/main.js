@@ -23,8 +23,7 @@ define(function(require, exports, module) {
   });
 
   var cube = new Cube({
-    origin: [0.5, 0.5],
-    align: [0.5, 0.5]
+    size: 200
   });
 
   mainContext.add(rotateModifier).add(cube);
