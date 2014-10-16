@@ -1,0 +1,32 @@
+{
+  "name": "famous-connect-js-examples",
+  "description": "Famo.us: The Future of the Mobile Web? - Connect.JS 2014 Talk Examples.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/chalaschek/famous-connect-js-examples",
+  "authors": [{
+    "name": "chalaschek",
+    "url": "http://github.com/chalaschek/"
+  }],
+  "main": "app/index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "famo.us"
+  ],
+  "license": "ISC",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "src/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.11",
+    "almond": "~0.2.9",
+    "famous-polyfills": "~0.3.0",
+    "famous": "~0.3.0-rc"
+  }
+}
