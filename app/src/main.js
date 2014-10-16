@@ -23,7 +23,7 @@ define(function(require, exports, module) {
     properties: {
       backgroundColor: '#cccccc'
     },
-    classes: ['backfaceVisibility']
+    classes: ['backfaceVisibility', 'blue-background']
   });
 
   stateModifier.setTransform(Transform.rotateY(1000), {
