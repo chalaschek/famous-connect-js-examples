@@ -40,6 +40,10 @@ define(function(require, exports, module) {
     ];
 
     for(var i = 0; i < 6; i++){
+      var opacityModifier = new Modifier({
+        opacity: 0.8
+      });
+
       var translationModifier = new Modifier({
         transform: Transform.translate.apply(this, surfaceTranslations[i] )
       });
@@ -57,7 +61,7 @@ define(function(require, exports, module) {
         classes: ['backfaceVisibility']
       });
 
-      this.add(translationModifier).add(rotationModifier).add(surface);
+      this.add(opacityModifier).add(translationModifier).add(rotationModifier).add(surface);
     }
   }
 
