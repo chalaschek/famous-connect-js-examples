@@ -31,5 +31,5 @@ define(function(require, exports, module) {
     classes: ['backfaceVisibility']
   });
 
-  mainContext.add(centerModifier).add( square );
+  mainContext.add(centerModifier).add(square);
 });
