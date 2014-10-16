@@ -23,5 +23,5 @@ define(function(require, exports, module) {
     }
   });
 
-  mainContext.add(centerModifier).add( square );
+  mainContext.add(centerModifier).add(square);
 });
