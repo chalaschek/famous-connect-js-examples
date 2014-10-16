@@ -12,13 +12,14 @@ define(function(require, exports, module) {
 
   mainContext.setPerspective(1000);
 
-  var initialTime = Date.now();
+  var angle = 0;
 
   var centerModifier = new Modifier({
     origin: [0.5, 0.5],
     align: [0.5, 0.5],
     transform: function(){
-      return Transform.rotateY(0.002 * (Date.now() - initialTime));
+      angle += 0.03;
+      return Transform.rotateY(angle);
     }
   });
 
