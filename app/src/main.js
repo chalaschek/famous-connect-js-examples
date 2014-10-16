@@ -12,9 +12,7 @@ define(function(require, exports, module) {
 
   var square = new Surface({
     size: [200, 200],
-    properties: {
-      backgroundColor: '#cccccc'
-    }
+    classes: ['blue-background']
   });
 
   mainContext.add(square);
